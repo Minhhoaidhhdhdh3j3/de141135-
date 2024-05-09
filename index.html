@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Honda</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+#menu{
+    width: 1920px;
+    height: 100px;
+    background-color: red;
+    /* position: relative; */
+    font-size: 20px;
+}
+
+.imgmenu{
+    max-width: 100%;
+    object-fit: cover;
+    height: 100px;
+    left: 150px;
+    position: relative;
+    border-radius: 5px;
+}
+
+li{
+    list-style-type: none;
+    padding: 0 20px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: -60px;
+    left: 400px;
+    color: white;
+    font-weight: bold;
+}
+
+li:hover{
+    background-color: brown;
+
+}
+.slideshow {
+    width: 100%; /* Độ rộng của slideshow */
+    overflow: hidden; /* Ẩn nội dung vượt ra ngoài khu vực của slideshow */
+    position: relative; /* Để các hình ảnh có thể được định vị tuyệt đối */
+    margin-top: 10px;
+}
+
+.listimg {
+    display: flex; /* Sử dụng flexbox để các hình ảnh được xếp theo hàng ngang */
+    animation: slideAnimation 9s infinite; /* Áp dụng animation với thời gian 9 giây lặp lại vô hạn */
+}
+
+.listimg img {
+    width: 100%; /* Đảm bảo hình ảnh lấp đầy khu vực của listimg */
+    height: auto; /* Chiều cao tự động điều chỉnh để không bị biến dạng */
+    object-fit: cover; /* Hiển thị hình ảnh một cách đồng nhất */
+    transition: opacity 0.25s ease; /* Áp dụng hiệu ứng chuyển tiếp giữa các hình ảnh */
+}
+
+/* Keyframes để thực hiện chuyển đổi hình ảnh */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); } /* Không di chuyển từ vị trí ban đầu */
+    33.33% { transform: translateX(0); } /* Hiển thị ảnh 1 trong 1/3 thời gian */
+    33.34% { transform: translateX(-100%); } /* Di chuyển sang trái 100% của độ rộng của ảnh */
+    66.66% { transform: translateX(-100%); } /* Hiển thị ảnh 2 trong 1/3 thời gian */
+    66.67% { transform: translateX(-200%); } /* Di chuyển sang trái 200% của độ rộng của ảnh */
+    100% { transform: translateX(-200%); } /* Hiển thị ảnh 3 và giữ trong 1/3 thời gian còn lại */
+}
+
+#content{
+    width: 1920px;
+    height: 1000px;
+    /* background-color: #f1f1f1; */
+}
+
+.left{
+    width: 1596px;
+}
+.product{
+    max-width:350px;
+    /* background-color:wheat ; */
+    padding: 20px;
+    float: left;
+
+}
+
+.imgprd{
+    max-width: 324px;
+    max-height: 240px;
+
+}
+
+.circle{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.circle-black {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: #000; 
+    border: 0.5px solid black;
+    margin-left: 10px;
+
+}
+
+.circle-red {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: red; 
+    border: 0.5px solid black;
+    margin-left: 10px;
+}
+
+.circle-nau {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: rgb(71, 1, 1); 
+    border: 0.5px solid black;
+    margin-left: 10px;
+}
+
+.circle-blue {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: blue; 
+    border: 0.5px solid black;
+    margin-left: 10px;
+}
+
+.circle-yellow {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: yellow; 
+    border: 0.5px solid black;
+    margin-left: 10px;
+}
+
+.circle-white {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: white; 
+    border: 0.5px solid black;
+    margin-left: 10px;
+
+}
+
+.circle-gray {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: gray;
+    border: 0.5px solid black;
+    margin-left: 10px;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+.note{
+    background-color: red;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 30px;
+    position: relative;
+    bottom: 160px;
+    left: 100px;
+    opacity: 0%;
+
+}
+
+.product:hover .note{
+    opacity: 100%;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.sidebar{
+    width: 324px;
+    float: right;
+    margin-top: -400px;
+    font-size: 20px;
+}
+
+.dm{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.xe{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold
+}
+
+
+
+
+
+ 
+</style>
+<body>
+        <div id="menu">
+            <img class="imgmenu" src="./img/Honda _Paper_ by PES _ Emmy Nominated Commercial.jpg" alt="">
+            <ul>
+                <li>Giới thiệu</li>
+                <li>Xe máy </li>
+                <li>Ôtô</li>
+                <li>Tin Tức</li>
+            </ul>
+        </div>
+        <div class="slideshow">
+                <div class="listimg">
+                    <img src="img/image slide/slide.jpg" alt="Slide 1">
+                    <img src="./img/image slide/slide 2.jpg" alt="Slide 2">
+                    <img src="img/image slide/slide 3.jpg" alt="Slide 3">
+                </div>
+        </div>
+        <div id="content">
+            <div class="left">
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-black"></div>
+                    <div class="circle-red"></div>
+                    <div class="circle-white"></div>
+                    <div class="circle-gray"></div>
+                    </div>
+                    <img src="./img/xe ga/SH.png" alt=""class=imgprd>
+                    <p class="name">SH 125i/150i</p>
+                    <p class="price">Từ 70.990.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-white"></div>
+                    <div class="circle-gray"></div>
+                    <div class="circle-black"></div>
+                    <div class="circle-red"></div>
+                    </div>
+                    <img src="./img/xe ga/PCX.png" alt=""class=imgprd>
+                    <p class="name">PCX 125 - PCX 150</p>
+                    <p class="price">Từ 56.490.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-black"></div>
+                    <div class="circle-red"></div>
+                    <div class="circle-black"></div>
+                    <div class="circle-nau"></div>
+                    </div>
+                    <img src="./img/xe ga/Lead.png" alt=""class=imgprd>
+                    <p class="name">Lead 125 FI</p>
+                    <p class="price">Từ 38.290.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-gray"></div>
+                    <div class="circle-red"></div>
+                    <div class="circle-white"></div>
+                    </div>
+                    <img src="./img/xe ga/SH.png" alt=""class=imgprd>
+                    <p class="name">SH 125i/150i</p>
+                    <p class="price">Từ 70.990.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-nau"></div>
+                    <div class="circle-blue"></div>
+                    <div class="circle-black"></div>
+                    <div class="circle-red"></div>
+                    </div>
+                    <img src="./img/xe côn tay/Winner X.png" alt="" class=imgprd>
+                    <p class="name">Winner X</p>
+                    <p class="price">Từ 45.990.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-red"></div>
+                    <div class="circle-black"></div>
+                    </div>
+                    <img src="./img/xe côn tay/CBR 150R.png" alt="" class=imgprd>
+                    <p class="name">CB150R Exmotion</p>
+                    <p class="price">Từ 105.000.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-red"></div>
+                    <div class="circle-yellow"></div>
+                    <div class="circle-white"></div>
+                    </div>
+                    <img src="./img/xe côn tay/MSX.png" alt=""class=imgprd>
+                    <p class="name">MSX 125</p>
+                    <p class="price">Từ 49.990.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="circle">
+                    <div class="circle-yellow"></div>
+                    <div class="circle-blue"></div>
+                    <div class="circle-red"></div>
+                    <div class="circle-black"></div>
+                    </div>
+                    <img src="./img/xe côn tay/Monkey.png" alt=""class=imgprd>
+                    <p class="name">Monkey</p>
+                    <p class="price">Từ 48.990.000 VNĐ</p>
+                    <div class="note">
+                        <p>Xem chi tiết</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <p class="dm">Danh mục</p>
+                <hr>
+                <p class="xe">Xe tay ga</p>
+                <hr>
+                <p class="xe">Xe số</p>
+                <hr>
+                <p class="xe">Xe Moto</p>
+                <hr>
+                <p class="xe">Xe Côn tay</p>
+                <hr>
+                <p class="xe">Xe Ôtô</p>
+            </div>
+        </div>
+
+</body>
+</html>
+
+
+<!-- 1396 -->
